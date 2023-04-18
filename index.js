@@ -9,14 +9,22 @@ const arr = [];
 while(arr.length < 1000) {
     let n = getRandomIntInclusive(1, 300);
     arr.push(n);
-}
+}// просто рандомные числа в массиве arr
+
+
+
+
 // стандартный способ
 const original = arr
 const serialized = JSON.stringify(original)
 const deserialized = JSON.parse(serialized)
 console.log(serialized)
 console.log(deserialized)
-// просто рандомные числа в массиве arr
+
+
+
+
+// способ с перевод в 16чный систему
 const parseSixteen = arr.map(el=> el.toString(16))
 console.log(JSON.stringify(parseSixteen).replace(/"/g,""))
 // ничего не придумал без алгоритмов сжатия , взял в 16чный код перевел так как ASCII (можно было ещё больше кодировку сделать)
